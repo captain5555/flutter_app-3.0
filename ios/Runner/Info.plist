@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>NAS素材管理</string>
+	<string>NAS Material Manager</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -47,16 +47,16 @@
 	<true/>
 
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>访问相册以下载和保存素材</string>
+	<string>Access photo library to download and save materials</string>
 
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>保存图片和视频到相册</string>
+	<string>Save photos and videos to gallery</string>
 
 	<key>NSCameraUsageDescription</key>
-	<string>访问相机以拍摄照片或视频</string>
+	<string>Access camera to take photos or videos</string>
 
 	<key>NSMicrophoneUsageDescription</key>
-	<string>访问麦克风以录制视频</string>
+	<string>Access microphone to record videos</string>
 
 	<key>UIFileSharingEnabled</key>
 	<true/>
