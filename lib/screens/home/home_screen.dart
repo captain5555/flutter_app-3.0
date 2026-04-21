@@ -815,9 +815,13 @@ class _MaterialsTabState extends State<_MaterialsTab> {
             mainAxisSpacing: ThemeConstants.spacingMd,
           ),
           itemCount: provider.materials.length,
+          cacheExtent: 500,
+          addAutomaticKeepAlives: false,
+          addRepaintBoundaries: false,
           itemBuilder: (context, index) {
             final material = provider.materials[index];
             return MaterialCard(
+              key: ValueKey('material-${material.id}'),
               material: material,
               isSelected: _selectedIds.contains(material.id),
               onTap: () {

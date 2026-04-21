@@ -100,13 +100,14 @@ class MaterialCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final settingsProvider = context.watch<SettingsProvider>();
+    final settingsProvider = context.read<SettingsProvider>();
     final thumbnailUrl = _getThumbnailUrl(settingsProvider.baseUrl);
 
-    return GestureDetector(
-      onTap: onTap,
-      onLongPress: onLongPress,
-      child: Container(
+    return RepaintBoundary(
+      child: GestureDetector(
+        onTap: onTap,
+        onLongPress: onLongPress,
+        child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(ThemeConstants.borderRadiusMd),
           border: isSelected
@@ -134,6 +135,7 @@ class MaterialCard extends StatelessWidget {
                       CachedNetworkImage(
                         imageUrl: thumbnailUrl,
                         fit: BoxFit.cover,
+                        alignment: Alignment.center,
                         memCacheWidth: 400,
                         memCacheHeight: 400,
                         maxWidthDiskCache: 800,
